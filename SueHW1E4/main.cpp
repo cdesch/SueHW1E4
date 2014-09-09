@@ -197,9 +197,50 @@ void Person::printName(){
     printf("%s %s \n", firstName.c_str(), lastName.c_str());
 }
 
-//Global Variables//
+//****Class Library Declaration*****//
+
+class Library {
+    
+private:
+    string name;
+    PersonStruct owner;
+    vector <Book> books;
+    
+public:
+    //Constructor
+    Library(); //This is the constructor
+    //Deconstructor
+    ~Library();
+    
+    //Member functions//
+    void printInfo();
+    
+    //GETTERS//
+    string getName();
+    PersonStruct getOwner();
+    Book getBook(int i);    //Gets a single book by index
+    vector <Book> getBooks(); //gets all the books by returning the full vector
+    
+    //SETTERS//
+    void setName(string t);
+    void setOwner(PersonStruct p);
+    void setBook(int i, Book book); //Sets one book in the vector by index
+    void addBook(Book book); //Adds a book to the vector
+    void setBooks(vector <Book> b); //Sets all the books in the vector
+};
+
+
+//****Class Library Implementation *****//
+
+//TODO: Implement each public function in the Library Class Declaration
+
+//****END Class Library Implementation *****//
+
+//*****Global Variables*****//
 vector <Book> books; //My Vector of Books
 vector <Book> reverseBooks;
+//*****End Global Variables*****//
+
 
 //This function converts a string to an integer
 //It returns a variable of type int
