@@ -213,7 +213,11 @@ public:
     ~Library();
     
     //Member functions//
-    void printInfo();
+    void printLibraryInfo(); //Prints the info for all the books in the library
+    void printBookInfo(int i); //Prints the info for one book in the library for a given index i
+    void reverseBooks(); //Reverses the current vector
+    void addBook(Book book); //Adds a book to the vector
+    void removeBook(int i); //removes a book from the vector (Library) at the given index i
     
     //GETTERS//
     string getName();
@@ -225,7 +229,6 @@ public:
     void setName(string t);
     void setOwner(PersonStruct p);
     void setBook(int i, Book book); //Sets one book in the vector by index
-    void addBook(Book book); //Adds a book to the vector
     void setBooks(vector <Book> b); //Sets all the books in the vector
 };
 
@@ -392,8 +395,16 @@ void exerciseThree(){
     cout << "***End Exercise 3***" << endl;
 }
 
+void exerciseFour(){
+    cout << "    ***** "<< __PRETTY_FUNCTION__ << " START *******" << endl;
+    cout << "    ***** " << __PRETTY_FUNCTION__ << " END ******" << endl;
+}
+
 int main(int argc, const char * argv[]){
-    cout << "Lab 1, Exercise 3 \n";
-    exerciseThree();
+    cout << "Lab 1, Exercise 4 \n";
+    cout << "By Sue Chang, susanmchang@verizon.net \n";
+    
+    exerciseFour();
+    
     return 0;
 }
